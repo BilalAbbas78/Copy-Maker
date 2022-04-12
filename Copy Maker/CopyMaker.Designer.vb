@@ -28,29 +28,28 @@ Partial Class CopyMaker
         Me.btnStart = New System.Windows.Forms.Button()
         Me.txtNames = New System.Windows.Forms.TextBox()
         Me.lblSourceFile = New System.Windows.Forms.Label()
-        Me.lblDestinationFolder = New System.Windows.Forms.Label()
-        Me.lblPathDestinationFolder = New System.Windows.Forms.Label()
-        Me.btnBrowseDestinationFolder = New System.Windows.Forms.Button()
+        Me.lblOutputFolder = New System.Windows.Forms.Label()
+        Me.lblPathOutputFolder = New System.Windows.Forms.Label()
+        Me.btnBrowseOutputFolder = New System.Windows.Forms.Button()
         Me.dbFolderBrowser = New System.Windows.Forms.FolderBrowserDialog()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnBrowseSourceFile
         '
-        Me.btnBrowseSourceFile.Location = New System.Drawing.Point(163, 28)
+        Me.btnBrowseSourceFile.BackColor = System.Drawing.Color.White
+        Me.btnBrowseSourceFile.Location = New System.Drawing.Point(122, 28)
         Me.btnBrowseSourceFile.Name = "btnBrowseSourceFile"
         Me.btnBrowseSourceFile.Size = New System.Drawing.Size(94, 29)
         Me.btnBrowseSourceFile.TabIndex = 0
         Me.btnBrowseSourceFile.Text = "Browse"
-        Me.btnBrowseSourceFile.UseVisualStyleBackColor = True
-        '
-        'dbLoadFile
-        '
-        Me.dbLoadFile.FileName = "OpenFileDialog1"
+        Me.btnBrowseSourceFile.UseVisualStyleBackColor = False
         '
         'lblPathSourceFile
         '
         Me.lblPathSourceFile.AutoSize = True
-        Me.lblPathSourceFile.Location = New System.Drawing.Point(281, 32)
+        Me.lblPathSourceFile.ForeColor = System.Drawing.Color.White
+        Me.lblPathSourceFile.Location = New System.Drawing.Point(12, 58)
         Me.lblPathSourceFile.Name = "lblPathSourceFile"
         Me.lblPathSourceFile.Size = New System.Drawing.Size(45, 20)
         Me.lblPathSourceFile.TabIndex = 1
@@ -58,71 +57,90 @@ Partial Class CopyMaker
         '
         'btnStart
         '
-        Me.btnStart.Location = New System.Drawing.Point(560, 255)
+        Me.btnStart.Location = New System.Drawing.Point(182, 493)
         Me.btnStart.Name = "btnStart"
         Me.btnStart.Size = New System.Drawing.Size(94, 29)
-        Me.btnStart.TabIndex = 2
+        Me.btnStart.TabIndex = 3
         Me.btnStart.Text = "Start"
         Me.btnStart.UseVisualStyleBackColor = True
         '
         'txtNames
         '
-        Me.txtNames.Location = New System.Drawing.Point(23, 147)
+        Me.txtNames.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtNames.Location = New System.Drawing.Point(12, 179)
         Me.txtNames.Multiline = True
         Me.txtNames.Name = "txtNames"
         Me.txtNames.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtNames.Size = New System.Drawing.Size(282, 229)
-        Me.txtNames.TabIndex = 3
+        Me.txtNames.Size = New System.Drawing.Size(438, 293)
+        Me.txtNames.TabIndex = 2
         '
         'lblSourceFile
         '
         Me.lblSourceFile.AutoSize = True
-        Me.lblSourceFile.Location = New System.Drawing.Point(23, 32)
+        Me.lblSourceFile.ForeColor = System.Drawing.Color.White
+        Me.lblSourceFile.Location = New System.Drawing.Point(12, 32)
         Me.lblSourceFile.Name = "lblSourceFile"
         Me.lblSourceFile.Size = New System.Drawing.Size(84, 20)
         Me.lblSourceFile.TabIndex = 4
         Me.lblSourceFile.Text = "Source File:"
         '
-        'lblDestinationFolder
+        'lblOutputFolder
         '
-        Me.lblDestinationFolder.AutoSize = True
-        Me.lblDestinationFolder.Location = New System.Drawing.Point(23, 67)
-        Me.lblDestinationFolder.Name = "lblDestinationFolder"
-        Me.lblDestinationFolder.Size = New System.Drawing.Size(134, 20)
-        Me.lblDestinationFolder.TabIndex = 7
-        Me.lblDestinationFolder.Text = "Destination Folder:"
+        Me.lblOutputFolder.AutoSize = True
+        Me.lblOutputFolder.ForeColor = System.Drawing.Color.White
+        Me.lblOutputFolder.Location = New System.Drawing.Point(12, 94)
+        Me.lblOutputFolder.Name = "lblOutputFolder"
+        Me.lblOutputFolder.Size = New System.Drawing.Size(104, 20)
+        Me.lblOutputFolder.TabIndex = 7
+        Me.lblOutputFolder.Text = "Output Folder:"
         '
-        'lblPathDestinationFolder
+        'lblPathOutputFolder
         '
-        Me.lblPathDestinationFolder.AutoSize = True
-        Me.lblPathDestinationFolder.Location = New System.Drawing.Point(281, 67)
-        Me.lblPathDestinationFolder.Name = "lblPathDestinationFolder"
-        Me.lblPathDestinationFolder.Size = New System.Drawing.Size(45, 20)
-        Me.lblPathDestinationFolder.TabIndex = 6
-        Me.lblPathDestinationFolder.Text = "None"
+        Me.lblPathOutputFolder.AutoSize = True
+        Me.lblPathOutputFolder.ForeColor = System.Drawing.Color.White
+        Me.lblPathOutputFolder.Location = New System.Drawing.Point(12, 120)
+        Me.lblPathOutputFolder.Name = "lblPathOutputFolder"
+        Me.lblPathOutputFolder.Size = New System.Drawing.Size(45, 20)
+        Me.lblPathOutputFolder.TabIndex = 6
+        Me.lblPathOutputFolder.Text = "None"
         '
-        'btnBrowseDestinationFolder
+        'btnBrowseOutputFolder
         '
-        Me.btnBrowseDestinationFolder.Location = New System.Drawing.Point(163, 63)
-        Me.btnBrowseDestinationFolder.Name = "btnBrowseDestinationFolder"
-        Me.btnBrowseDestinationFolder.Size = New System.Drawing.Size(94, 29)
-        Me.btnBrowseDestinationFolder.TabIndex = 5
-        Me.btnBrowseDestinationFolder.Text = "Browse"
-        Me.btnBrowseDestinationFolder.UseVisualStyleBackColor = True
+        Me.btnBrowseOutputFolder.BackColor = System.Drawing.Color.White
+        Me.btnBrowseOutputFolder.Location = New System.Drawing.Point(122, 90)
+        Me.btnBrowseOutputFolder.Name = "btnBrowseOutputFolder"
+        Me.btnBrowseOutputFolder.Size = New System.Drawing.Size(94, 29)
+        Me.btnBrowseOutputFolder.TabIndex = 1
+        Me.btnBrowseOutputFolder.Text = "Browse"
+        Me.btnBrowseOutputFolder.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(12, 156)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(123, 20)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Input File Names:"
         '
         'CopyMaker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.lblDestinationFolder)
-        Me.Controls.Add(Me.lblPathDestinationFolder)
-        Me.Controls.Add(Me.btnBrowseDestinationFolder)
+        Me.BackColor = System.Drawing.Color.Navy
+        Me.ClientSize = New System.Drawing.Size(476, 534)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblOutputFolder)
+        Me.Controls.Add(Me.lblPathOutputFolder)
+        Me.Controls.Add(Me.btnBrowseOutputFolder)
         Me.Controls.Add(Me.lblSourceFile)
         Me.Controls.Add(Me.txtNames)
         Me.Controls.Add(Me.btnStart)
         Me.Controls.Add(Me.lblPathSourceFile)
         Me.Controls.Add(Me.btnBrowseSourceFile)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "CopyMaker"
         Me.Text = "Copy Maker"
         Me.ResumeLayout(False)
@@ -136,8 +154,9 @@ Partial Class CopyMaker
     Friend WithEvents btnStart As Button
     Friend WithEvents txtNames As TextBox
     Friend WithEvents lblSourceFile As Label
-    Friend WithEvents lblDestinationFolder As Label
-    Friend WithEvents lblPathDestinationFolder As Label
-    Friend WithEvents btnBrowseDestinationFolder As Button
+    Friend WithEvents lblOutputFolder As Label
+    Friend WithEvents lblPathOutputFolder As Label
+    Friend WithEvents btnBrowseOutputFolder As Button
     Friend WithEvents dbFolderBrowser As FolderBrowserDialog
+    Friend WithEvents Label1 As Label
 End Class

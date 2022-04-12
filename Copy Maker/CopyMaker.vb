@@ -9,14 +9,41 @@ Public Class CopyMaker
     End Sub
 
     Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
+
+        If lblLoadFile.Text = "None" Then
+            MsgBox("Please select path first", vbCritical, "Error")
+        End If
+
+
         Dim sourceFile As String = dbLoadFile.FileName
-        Dim fileName As String = "ABC"
+
+        For Each strLine As String In txtNames.Text.Split(vbNewLine)
+            'TextBox1.Text &= strLine & Environment.NewLine
+
+            Dim fileName As String = Trim(strLine)
+            If fileName IsNot "" Then
+
+                'TextBox1.AppendText(i & Environment.NewLine)
+
+
+                Dim destinationFile As String = "D:\" + fileName + Path.GetExtension(dbLoadFile.FileName)
+                clone(sourceFile, destinationFile)
+            End If
+
+
+        Next
 
         For Each i In txtNames.Text
-            fileName = i
-            Dim destinationFile As String = "D:\" + fileName + Path.GetExtension(dbLoadFile.FileName)
+            Dim fileName As String = i
+            If fileName IsNot " " Then
 
-            clone(sourceFile, destinationFile)
+                'TextBox1.AppendText(i & Environment.NewLine)
+
+
+                'Dim destinationFile As String = "D:\" + fileName + Path.GetExtension(dbLoadFile.FileName)
+                'clone(sourceFile, destinationFile)
+            End If
+
         Next
 
     End Sub

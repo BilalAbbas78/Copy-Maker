@@ -11,8 +11,14 @@ Public Class CopyMaker
     Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
         Dim sourceFile As String = dbLoadFile.FileName
         Dim fileName As String = "ABC"
-        Dim destinationFile As String = "D:\" + fileName + Path.GetExtension(dbLoadFile.FileName)
-        clone(sourceFile, destinationFile)
+
+        For Each i In txtNames.Text
+            fileName = i
+            Dim destinationFile As String = "D:\" + fileName + Path.GetExtension(dbLoadFile.FileName)
+
+            clone(sourceFile, destinationFile)
+        Next
+
     End Sub
 
     Private Function clone(sourceFile As String, destinationFile As String)

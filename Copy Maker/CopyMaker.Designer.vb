@@ -41,7 +41,7 @@ Partial Class CopyMaker
         Me.btnBrowseSourceFile.BackColor = System.Drawing.Color.RoyalBlue
         Me.btnBrowseSourceFile.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnBrowseSourceFile.ForeColor = System.Drawing.Color.White
-        Me.btnBrowseSourceFile.Location = New System.Drawing.Point(415, 90)
+        Me.btnBrowseSourceFile.Location = New System.Drawing.Point(423, 90)
         Me.btnBrowseSourceFile.Name = "btnBrowseSourceFile"
         Me.btnBrowseSourceFile.Size = New System.Drawing.Size(154, 27)
         Me.btnBrowseSourceFile.TabIndex = 0
@@ -53,7 +53,7 @@ Partial Class CopyMaker
         Me.btnExecute.BackColor = System.Drawing.Color.RoyalBlue
         Me.btnExecute.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnExecute.ForeColor = System.Drawing.Color.White
-        Me.btnExecute.Location = New System.Drawing.Point(599, 111)
+        Me.btnExecute.Location = New System.Drawing.Point(603, 107)
         Me.btnExecute.Name = "btnExecute"
         Me.btnExecute.Size = New System.Drawing.Size(103, 33)
         Me.btnExecute.TabIndex = 3
@@ -76,7 +76,7 @@ Partial Class CopyMaker
         Me.btnBrowseOutputFolder.BackColor = System.Drawing.Color.RoyalBlue
         Me.btnBrowseOutputFolder.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnBrowseOutputFolder.ForeColor = System.Drawing.Color.White
-        Me.btnBrowseOutputFolder.Location = New System.Drawing.Point(416, 131)
+        Me.btnBrowseOutputFolder.Location = New System.Drawing.Point(424, 131)
         Me.btnBrowseOutputFolder.Name = "btnBrowseOutputFolder"
         Me.btnBrowseOutputFolder.Size = New System.Drawing.Size(154, 27)
         Me.btnBrowseOutputFolder.TabIndex = 1
@@ -137,7 +137,7 @@ Partial Class CopyMaker
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(733, 518)
+        Me.ClientSize = New System.Drawing.Size(743, 518)
         Me.Controls.Add(Me.txtPathOutputFolder)
         Me.Controls.Add(Me.txtPathSourceFile)
         Me.Controls.Add(Me.Label2)

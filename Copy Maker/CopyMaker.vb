@@ -14,16 +14,11 @@ Public Class CopyMaker
         Else
             Dim sourceFile As String = dbLoadFile.FileName
 
-            'Creating folder with file name
-            If Not System.IO.Directory.Exists(txtPathOutputFolder.Text + "/" + System.IO.Path.GetFileNameWithoutExtension(dbLoadFile.FileName)) Then
-                System.IO.Directory.CreateDirectory(txtPathOutputFolder.Text + "/" + System.IO.Path.GetFileNameWithoutExtension(dbLoadFile.FileName))
-            End If
-
             For Each strLine As String In txtNames.Text.Split(vbCrLf)
 
                 Dim fileName As String = Trim(strLine)
                 If fileName IsNot "" Then
-                    Dim destinationFile As String = txtPathOutputFolder.Text + "/" + System.IO.Path.GetFileNameWithoutExtension(dbLoadFile.FileName) + "/" + fileName + Path.GetExtension(dbLoadFile.FileName)
+                    Dim destinationFile As String = txtPathOutputFolder.Text + "/" + fileName + Path.GetExtension(dbLoadFile.FileName)
                     clone(sourceFile, destinationFile)
                 End If
             Next
